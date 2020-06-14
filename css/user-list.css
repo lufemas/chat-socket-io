@@ -1,0 +1,60 @@
+:root{
+  --black: #010101;
+  --white: #F0F0F0;
+  --dark-bg: #222222;
+  --wake-up-green: #19FF4D;
+  --royal-purple: #6600FF;
+
+}
+
+.user-list-section{
+
+/* max-height: 50vh; */
+}
+
+#user-list{
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: .5rem;
+}
+
+.user-list-item{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  width: 100%;
+  height: 2rem;
+  align-items: center;
+  padding: .5rem 0;
+}
+
+.user-list-item span{
+  display: flex;
+}
+
+.online-user-status {
+  height: 2rem;
+  margin-left: .5rem;
+  display: none;
+  align-self: center;
+}
+
+.online-user-avatar{
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  border: solid .2rem rgb(7, 158, 7);
+}
+
+.online-user-username{
+  /* display: inline-block; */
+  align-self: center;
+  height: auto;
+  margin-left: .5rem;
+}
+
+
+/* <ul id="user-list">
+<li class="user-list-item"><img src="http://github.com/lufemas.png" class="online-user-avatar" alt=""><span class="online-user-username">lufemas</span></li>
+</ul> */

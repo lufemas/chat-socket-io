@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/user-list.css">
+    <link rel="stylesheet" href="css/msg-block.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <article class="left-container">
+
+            <header>
+                <h1>Chat Buddy</h1>
+            </header>
+    
+            <section class="msgs-container">
+                <ul id="msg-list">
+
+                    <!-- <li class="msg-block msg-block-user">
+                        <div class="msg-avatar">
+                            <img src="http://github.com/lufemas.png" alt="">
+                        </div>
+                        <span class="msg-block-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit Distinctio, nesciunt at. Quia libero iure dolorem.</span>
+                    </li>
+
+                    <li class="msg-block">
+                        <div class="msg-avatar">
+                            <img src="http://github.com/lufemas.png" alt="">
+                        </div>
+                        <span class="msg-block-text"> <span class="msg-block-nick">Lufemas <span class="msg-block-date"></span> </span> Lorem ipsum dolor sit amet consectetur adipisicing elit Distinctio, nesciunt at. Quia libero iure dolorem.</span>
+                    </li> -->
+
+                </ul>
+            </section>
+    
+            <section class="user-ui">
+                <!-- <img id="avatar"  src="" alt=""> -->
+                <textarea id="input-msg"> </textarea>
+
+                    <button id="send-msg-btn">Send</button>
+            </section>
+
+        </article>
+
+        <section class="user-list-section">
+            <ul id="user-list">
+                <!-- <li class="user-list-item">
+                    <img src="http://github.com/lufemas.png" class="online-user-avatar" alt="">
+                    <span>
+                        <strong class="online-user-username">lufemas</strong>
+                        <img class="online-user-status" src="./assets/gifs/giphy.webp"/>
+                    </span>
+                </li> -->
+            </ul>
+        </section>
+
+    </main>
+    
+    <section id="login-window">
+        <div>
+
+            <label for="github-user">Github username</label>
+            <input type="text" name="github-user" id="github-user" value='Guest'>
+            <button id="login-btn">Log in</button>
+        </div>
+
+    </section>
+
+
+    <script src="socket.io/socket.io.js"></script>
+    <script src="js/User.js"></script>
+    <script src="js/Message.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
