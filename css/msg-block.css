@@ -59,6 +59,15 @@
   margin: .25rem;
 }
 
+.msg-block-nick{
+  font-weight: 700;
+}
+
+.msg-block-date{
+  font-style: italic;
+  font-weight: 100;
+}
+
 #msg-list{
   padding: 0;
 }

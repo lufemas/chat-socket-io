@@ -2,6 +2,7 @@
 
 const $      = (e)=> document.querySelector(e)
 const socket = io()
+console.log(socket)
 
 //////////////////////////////
 let isLogged = false;
@@ -54,7 +55,8 @@ const initSocketListening = ()=>{
 
         if(text){
 
-            const newMsg = new Message({_text: text, _date: new Date(), _user: {username: currentUser.username, id: currentUser.id}})
+            const currentDate = new Intl.DateTimeFormat('en-US',{yearn: 'numeric', month: 'short', day:'numeric',hour:'numeric', minute:'numeric', second:'numeric'}).format(new Date())
+            const newMsg = new Message({_text: text, _date:  currentDate, _user: {username: currentUser.username, id: currentUser.id}})
     
             socket.emit('message',newMsg)
             $('#msg-list').innerHTML += Message.render(newMsg,true)
@@ -104,11 +106,11 @@ const initSocketListening = ()=>{
     },1000)
 
     socket.on('typing',(userID)=>{
-        $(`#-${userID}-typing-gif`).style.display = 'inline'
+        $(`#ID${userID}-typing-gif`).style.display = 'inline'
     })
 
     socket.on('notTyping',(userID)=>{
-        $(`#-${userID}-typing-gif`).style.display = 'none'
+        $(`#ID${userID}-typing-gif`).style.display = 'none'
     })
 
     }

@@ -14,7 +14,7 @@ Message.render = function ( {data:{user, date, text}}, _isCurrentUser ){ return 
         <div class="msg-avatar">
           <img src="http://github.com/${user.username}.png" alt="">
         </div>
-       <span class="msg-block-text"> <span class="msg-block-nick">${user.username}<span class="msg-block-date">${date}</span> </span>${text}</span>
+       <span class="msg-block-text"> <span class="msg-block-nick">${user.username}, <span class="msg-block-date">${date}</span> </span>${text}</span>
       </li>
   `)}
 

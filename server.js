@@ -1,15 +1,16 @@
 const express  = require('express')
 const app      = express()
-const PORT     = 3000
+const PORT     = 8080
 const server   = app.listen(PORT, () => {console.log(`Server running at http://localhost:${PORT}`)})
 const io       = require('socket.io').listen(server)
-const { v4: uuidv4 } = require('uuid');
-
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html')
-})
 
 app.use(express.static('.'))
+
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/client.html')
+})
+
 
 
 const loggedUsers = []
