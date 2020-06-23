@@ -1,6 +1,6 @@
 const express  = require('express')
 const app      = express()
-const PORT     = 8080
+const PORT     = process.env.PORT || 8080
 const server   = app.listen(PORT, () => {console.log(`Server running at http://localhost:${PORT}`)})
 const io       = require('socket.io').listen(server)
 
